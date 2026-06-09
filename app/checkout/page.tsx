@@ -44,7 +44,7 @@ const packagingOptions = [
     id: 'premium',
     name: 'Paket Eco Premium',
     description: 'Kotak kertas biji yang dapat ditanam dengan busa jamur',
-    price: 49000,
+    price: 3000,
     materials: [
       { name: 'Kotak', value: 'Kotak Kertas Biji yang Dapat Ditanam' },
       { name: 'Bantalan', value: 'Busa Miselium Jamur' },
@@ -57,7 +57,7 @@ const packagingOptions = [
     id: 'gift',
     name: 'Bungkus Kado Eco',
     description: 'Bungkus kain dapat digunakan ulang dengan pita rami',
-    price: 79000,
+    price: 5000,
     materials: [
       { name: 'Bungkus', value: 'Furoshiki Katun Organik' },
       { name: 'Pita', value: 'Pita Rami' },
@@ -79,7 +79,7 @@ const shippingOptions = [
     id: 'express',
     name: 'Pengiriman Eco Express',
     description: '2-3 hari kerja',
-    price: 29000,
+    price: 3000,
     carbonOffset: true,
   },
 ]

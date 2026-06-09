@@ -30,7 +30,7 @@ export function ShopClientSection() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedBadges, setSelectedBadges] = useState<string[]>([])
-  const [priceRange, setPriceRange] = useState([0, 600000])
+  const [priceRange, setPriceRange] = useState([0, 60000])
   const [sortBy, setSortBy] = useState('featured')
   const [showFilters, setShowFilters] = useState(false)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
@@ -94,7 +94,7 @@ export function ShopClientSection() {
     setSearchQuery('')
     setSelectedCategory(null)
     setSelectedBadges([])
-    setPriceRange([0, 600000])
+    setPriceRange([0, 60000])
     setSortBy('featured')
   }
 
@@ -103,7 +103,7 @@ export function ShopClientSection() {
     selectedCategory ||
     selectedBadges.length > 0 ||
     priceRange[0] > 0 ||
-    priceRange[1] < 600000
+    priceRange[1] < 60000
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-8 lg:px-8">
@@ -240,8 +240,8 @@ export function ShopClientSection() {
               <Slider
                 value={priceRange}
                 onValueChange={setPriceRange}
-                max={600000}
-                step={50000}
+                max={60000}
+                step={2000}
                 className="mb-4"
               />
               <div className="flex items-center justify-between text-sm text-muted-foreground">

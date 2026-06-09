@@ -15,14 +15,14 @@ import { formatRupiah } from '@/lib/utils'
 
 // Dummy portal data
 const DUMMY_ORDERS = [
-    { id: 'ORD-001', product: 'Set Wadah Makanan Bambu', customer: 'Budi S.', amount: 1098000, status: 'Diproses', date: '8 Jun 2026' },
-    { id: 'ORD-002', product: 'Set Bungkus Makanan Lilin Lebah', customer: 'Ani R.', amount: 369000, status: 'Dikirim', date: '7 Jun 2026' },
-    { id: 'ORD-003', product: 'Set Wadah Makanan Bambu', customer: 'Citra M.', amount: 549000, status: 'Selesai', date: '6 Jun 2026' },
+    { id: 'ORD-001', product: 'Set Wadah Makanan Bambu', customer: 'Budi S.', amount: 70000, status: 'Diproses', date: '8 Jun 2026' },
+    { id: 'ORD-002', product: 'Set Bungkus Makanan Lilin Lebah', customer: 'Ani R.', amount: 38000, status: 'Dikirim', date: '7 Jun 2026' },
+    { id: 'ORD-003', product: 'Set Wadah Makanan Bambu', customer: 'Citra M.', amount: 35000, status: 'Selesai', date: '6 Jun 2026' },
 ]
 
 const DUMMY_PRODUCTS = [
-    { id: '1', name: 'Set Wadah Makanan Bambu', price: 549000, stock: 45, sold: 234, status: 'Aktif' },
-    { id: '6', name: 'Set Bungkus Makanan Lilin Lebah', price: 369000, stock: 12, sold: 445, status: 'Aktif' },
+    { id: '1', name: 'Set Wadah Makanan Bambu', price: 35000, stock: 45, sold: 234, status: 'Aktif' },
+    { id: '6', name: 'Set Bungkus Makanan Lilin Lebah', price: 38000, stock: 12, sold: 445, status: 'Aktif' },
 ]
 
 const statusColors: Record<string, string> = {
