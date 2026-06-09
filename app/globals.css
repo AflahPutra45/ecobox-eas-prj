@@ -1,0 +1,141 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #2D2D2D;
+  --card: #FFFFFF;
+  --card-foreground: #2D2D2D;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D2D2D;
+  --primary: #A4F000;
+  --primary-foreground: #1A1A1A;
+  --secondary: #CC73B3;
+  --secondary-foreground: #FFFFFF;
+  --muted: #F5F5F5;
+  --muted-foreground: #6B6B6B;
+  --accent: #F5F5F5;
+  --accent-foreground: #2D2D2D;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E5E5;
+  --input: #E5E5E5;
+  --ring: #A4F000;
+  --chart-1: #A4F000;
+  --chart-2: #CC73B3;
+  --chart-3: #2D2D2D;
+  --chart-4: #6B6B6B;
+  --chart-5: #F5F5F5;
+  --radius: 0.75rem;
+  --sidebar: #FAFAFA;
+  --sidebar-foreground: #2D2D2D;
+  --sidebar-primary: #A4F000;
+  --sidebar-primary-foreground: #1A1A1A;
+  --sidebar-accent: #F5F5F5;
+  --sidebar-accent-foreground: #2D2D2D;
+  --sidebar-border: #E5E5E5;
+  --sidebar-ring: #A4F000;
+  
+  /* EcoBox custom tokens */
+  --eco-green: #A4F000;
+  --eco-green-dark: #8BD400;
+  --eco-pink: #CC73B3;
+  --eco-pink-light: #D98FC5;
+}
+
+.dark {
+  --background: #1A1A1A;
+  --foreground: #F5F5F5;
+  --card: #2D2D2D;
+  --card-foreground: #F5F5F5;
+  --popover: #2D2D2D;
+  --popover-foreground: #F5F5F5;
+  --primary: #A4F000;
+  --primary-foreground: #1A1A1A;
+  --secondary: #CC73B3;
+  --secondary-foreground: #FFFFFF;
+  --muted: #3D3D3D;
+  --muted-foreground: #A0A0A0;
+  --accent: #3D3D3D;
+  --accent-foreground: #F5F5F5;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #3D3D3D;
+  --input: #3D3D3D;
+  --ring: #A4F000;
+  --chart-1: #A4F000;
+  --chart-2: #CC73B3;
+  --chart-3: #F5F5F5;
+  --chart-4: #A0A0A0;
+  --chart-5: #3D3D3D;
+  --sidebar: #2D2D2D;
+  --sidebar-foreground: #F5F5F5;
+  --sidebar-primary: #A4F000;
+  --sidebar-primary-foreground: #1A1A1A;
+  --sidebar-accent: #3D3D3D;
+  --sidebar-accent-foreground: #F5F5F5;
+  --sidebar-border: #3D3D3D;
+  --sidebar-ring: #A4F000;
+  
+  /* EcoBox custom tokens */
+  --eco-green: #A4F000;
+  --eco-green-dark: #8BD400;
+  --eco-pink: #CC73B3;
+  --eco-pink-light: #D98FC5;
+}
+
+@theme inline {
+  --font-sans: 'Inter', 'Inter Fallback', sans-serif;
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-eco-green: var(--eco-green);
+  --color-eco-green-dark: var(--eco-green-dark);
+  --color-eco-pink: var(--eco-pink);
+  --color-eco-pink-light: var(--eco-pink-light);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
