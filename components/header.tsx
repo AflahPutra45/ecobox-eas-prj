@@ -28,6 +28,7 @@ export function Header() {
             alt="EcoBox"
             width={48}
             height={48}
+            priority                    // LCP element — preload untuk mempercepat render awal
             className="h-10 w-10 lg:h-12 lg:w-12"
           />
           <span className="text-xl font-bold tracking-tight lg:text-2xl">

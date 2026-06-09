@@ -1,11 +1,9 @@
-'use client'
-
+// Server Component — tidak ada 'use client', bisa di-render di server
 import Image from 'next/image'
 import Link from 'next/link'
 import { Star, Check } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { useCart } from '@/hooks/use-cart'
+import { AddToCartButton } from '@/components/add-to-cart-button'
 import type { Product } from '@/lib/data'
 
 const badgeColors = {
@@ -20,9 +18,8 @@ interface ProductCardProps {
   product: Product
 }
 
+// Server Component: HTML statik dirender di server, dikirim sebagai HTML siap tampil
 export function ProductCard({ product }: ProductCardProps) {
-  const { addItem } = useCart()
-
   return (
     <Link
       href={`/product/${product.id}`}
@@ -34,6 +31,7 @@ export function ProductCard({ product }: ProductCardProps) {
           src={product.image}
           alt={product.name}
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
 
@@ -105,16 +103,8 @@ export function ProductCard({ product }: ProductCardProps) {
               </span>
             )}
           </div>
-          <Button
-            size="sm"
-            className="bg-primary text-primary-foreground hover:bg-[#8BD400]"
-            onClick={(e) => {
-              e.preventDefault()
-              addItem(product)
-            }}
-          >
-            Tambah
-          </Button>
+          {/* Client island — hanya tombol ini yang jadi client component */}
+          <AddToCartButton product={product} />
         </div>
       </div>
     </Link>
