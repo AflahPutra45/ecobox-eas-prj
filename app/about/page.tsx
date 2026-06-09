@@ -41,24 +41,36 @@ const values = [
 
 const team = [
   {
-    name: 'Sarah Chen',
-    role: 'CEO & Co-founder',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop',
+    name: 'Dicky Hadi Firmansyah',
+    role: 'CEO - Chief Executive Officer',
+    image: '/Team/dicky.jpeg',
   },
   {
-    name: 'Marcus Johnson',
-    role: 'CTO & Co-founder',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
+    name: 'Achmad Adelard Aflah',
+    role: 'CFO - Chief Financial Officer',
+    image: '/Team/aflah.jpeg',
   },
   {
-    name: 'Emma Williams',
-    role: 'Kepala Keberlanjutan',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
+    name: 'Fikri Faiq Sholekhudin',
+    role: 'COO - Chief Operating Officer',
+    image: '/Team/soleh.jpeg',
   },
   {
-    name: 'David Park',
-    role: 'Kepala Operasional',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop',
+    name: 'Ahmed Syafiq Zidane',
+    role: 'CMO - Chief Marketing Officer',
+    image: '/Team/ahmed.jpeg',
+  },
+  {
+    // ── Anggota ke-5: ganti name, role, dan image sesuai kebutuhan ──
+    name: 'Zulhiari Maulana',
+    role: 'CIO - Chief Information Officer',
+    image: '/Team/zul.jpg',
+  },
+  {
+    // ── Anggota ke-6: ganti name, role, dan image sesuai kebutuhan ──
+    name: 'Faustino Serafim Prastira',
+    role: 'CTO - Chief Technology Officer',
+    image: '/Team/afim.jpeg',
   },
 ]
 
@@ -191,7 +203,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {team.map((member) => (
                 <div key={member.name} className="text-center">
                   <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full bg-muted">
