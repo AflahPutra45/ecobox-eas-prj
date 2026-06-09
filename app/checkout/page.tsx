@@ -12,6 +12,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
 import { Separator } from '@/components/ui/separator'
 import { useCart } from '@/hooks/use-cart'
 import { products } from '@/lib/data'
+import { formatRupiah } from '@/lib/utils'
 import {
   Package,
   Leaf,
@@ -43,7 +44,7 @@ const packagingOptions = [
     id: 'premium',
     name: 'Paket Eco Premium',
     description: 'Kotak kertas biji yang dapat ditanam dengan busa jamur',
-    price: 2.99,
+    price: 49000,
     materials: [
       { name: 'Kotak', value: 'Kotak Kertas Biji yang Dapat Ditanam' },
       { name: 'Bantalan', value: 'Busa Miselium Jamur' },
@@ -56,7 +57,7 @@ const packagingOptions = [
     id: 'gift',
     name: 'Bungkus Kado Eco',
     description: 'Bungkus kain dapat digunakan ulang dengan pita rami',
-    price: 4.99,
+    price: 79000,
     materials: [
       { name: 'Bungkus', value: 'Furoshiki Katun Organik' },
       { name: 'Pita', value: 'Pita Rami' },
@@ -78,7 +79,7 @@ const shippingOptions = [
     id: 'express',
     name: 'Pengiriman Eco Express',
     description: '2-3 hari kerja',
-    price: 5.99,
+    price: 29000,
     carbonOffset: true,
   },
 ]
@@ -198,7 +199,7 @@ export default function CheckoutPage() {
                               Qty: {item.quantity}
                             </span>
                             <span className="font-medium text-foreground">
-                              ${(item.product.price * item.quantity).toFixed(2)}
+                              {formatRupiah(item.product.price * item.quantity)}
                             </span>
                           </div>
                         </div>
@@ -265,7 +266,7 @@ export default function CheckoutPage() {
                                 <span className="font-medium text-foreground">
                                   {option.price === 0
                                     ? 'Gratis'
-                                    : `+$${option.price.toFixed(2)}`}
+                                    : `+${formatRupiah(option.price)}`}
                                 </span>
                               </div>
                               <p className="mt-1 text-sm text-muted-foreground">
@@ -348,7 +349,7 @@ export default function CheckoutPage() {
                                 <span className="font-medium text-foreground">
                                   {option.price === 0
                                     ? 'Gratis'
-                                    : `$${option.price.toFixed(2)}`}
+                                    : formatRupiah(option.price)}
                                 </span>
                               </div>
                               <p className="mt-1 text-sm text-muted-foreground">
@@ -484,7 +485,7 @@ export default function CheckoutPage() {
                     >
                       <Link href="/checkout/success">
                         <ShieldCheck className="mr-2 h-5 w-5" />
-                        Selesaikan Pesanan - ${total.toFixed(2)}
+                        Selesaikan Pesanan - {formatRupiah(total)}
                       </Link>
                     </Button>
                   </div>
@@ -504,7 +505,7 @@ export default function CheckoutPage() {
                         Subtotal ({activeItems.length} item)
                       </span>
                       <span className="font-medium text-foreground">
-                        ${subtotal.toFixed(2)}
+                        {formatRupiah(subtotal)}
                       </span>
                     </div>
                     <div className="flex justify-between text-sm">
@@ -512,7 +513,7 @@ export default function CheckoutPage() {
                       <span className="font-medium text-foreground">
                         {packagingPrice === 0
                           ? 'Gratis'
-                          : `$${packagingPrice.toFixed(2)}`}
+                          : formatRupiah(packagingPrice)}
                       </span>
                     </div>
                     <div className="flex justify-between text-sm">
@@ -520,14 +521,14 @@ export default function CheckoutPage() {
                       <span className="font-medium text-foreground">
                         {shippingPrice === 0
                           ? 'Gratis'
-                          : `$${shippingPrice.toFixed(2)}`}
+                          : formatRupiah(shippingPrice)}
                       </span>
                     </div>
                     <Separator />
                     <div className="flex justify-between">
                       <span className="font-semibold text-foreground">Total</span>
                       <span className="text-xl font-bold text-foreground">
-                        ${total.toFixed(2)}
+                        {formatRupiah(total)}
                       </span>
                     </div>
                   </div>

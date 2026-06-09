@@ -11,17 +11,18 @@ import {
     Package, TrendingUp, Star, ShoppingBag, Leaf, CheckCircle,
     Clock, BarChart2, LogOut, Plus, Eye, ArrowRight,
 } from 'lucide-react'
+import { formatRupiah } from '@/lib/utils'
 
 // Dummy portal data
 const DUMMY_ORDERS = [
-    { id: 'ORD-001', product: 'Set Wadah Makanan Bambu', customer: 'Budi S.', amount: 69.98, status: 'Diproses', date: '8 Jun 2026' },
-    { id: 'ORD-002', product: 'Set Bungkus Makanan Lilin Lebah', customer: 'Ani R.', amount: 22.99, status: 'Dikirim', date: '7 Jun 2026' },
-    { id: 'ORD-003', product: 'Set Wadah Makanan Bambu', customer: 'Citra M.', amount: 34.99, status: 'Selesai', date: '6 Jun 2026' },
+    { id: 'ORD-001', product: 'Set Wadah Makanan Bambu', customer: 'Budi S.', amount: 1098000, status: 'Diproses', date: '8 Jun 2026' },
+    { id: 'ORD-002', product: 'Set Bungkus Makanan Lilin Lebah', customer: 'Ani R.', amount: 369000, status: 'Dikirim', date: '7 Jun 2026' },
+    { id: 'ORD-003', product: 'Set Wadah Makanan Bambu', customer: 'Citra M.', amount: 549000, status: 'Selesai', date: '6 Jun 2026' },
 ]
 
 const DUMMY_PRODUCTS = [
-    { id: '1', name: 'Set Wadah Makanan Bambu', price: 34.99, stock: 45, sold: 234, status: 'Aktif' },
-    { id: '6', name: 'Set Bungkus Makanan Lilin Lebah', price: 22.99, stock: 12, sold: 445, status: 'Aktif' },
+    { id: '1', name: 'Set Wadah Makanan Bambu', price: 549000, stock: 45, sold: 234, status: 'Aktif' },
+    { id: '6', name: 'Set Bungkus Makanan Lilin Lebah', price: 369000, stock: 12, sold: 445, status: 'Aktif' },
 ]
 
 const statusColors: Record<string, string> = {
@@ -174,7 +175,7 @@ export default function VendorPortalPage() {
                                             <p className="text-sm text-muted-foreground">{order.product}</p>
                                             <p className="text-xs text-muted-foreground">oleh {order.customer} · {order.date}</p>
                                         </div>
-                                        <span className="font-semibold text-foreground">${order.amount.toFixed(2)}</span>
+                                        <span className="font-semibold text-foreground">{formatRupiah(order.amount)}</span>
                                         <span className={`rounded-full px-3 py-1 text-xs font-medium ${statusColors[order.status]}`}>
                                             {order.status}
                                         </span>
@@ -202,7 +203,7 @@ export default function VendorPortalPage() {
                                             <div className="flex-1 min-w-0">
                                                 <p className="font-medium text-foreground">{product.name}</p>
                                                 <p className="text-sm text-muted-foreground">
-                                                    ${product.price.toFixed(2)} · Stok: {product.stock} · Terjual: {product.sold}
+                                                    {formatRupiah(product.price)} · Stok: {product.stock} · Terjual: {product.sold}
                                                 </p>
                                             </div>
                                             <span className="rounded-full bg-[#A4F000]/20 px-3 py-1 text-xs font-medium text-[#5a8500]">

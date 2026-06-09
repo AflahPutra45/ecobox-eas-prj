@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Star, Check } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { AddToCartButton } from '@/components/add-to-cart-button'
+import { formatRupiah } from '@/lib/utils'
 import type { Product } from '@/lib/data'
 
 const badgeColors = {
@@ -96,10 +97,10 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Price and CTA */}
         <div className="mt-auto flex items-end justify-between pt-4">
           <div>
-            <span className="text-lg font-bold text-foreground">${product.price.toFixed(2)}</span>
+            <span className="text-lg font-bold text-foreground">{formatRupiah(product.price)}</span>
             {product.originalPrice && (
               <span className="ml-2 text-sm text-muted-foreground line-through">
-                ${product.originalPrice.toFixed(2)}
+                {formatRupiah(product.originalPrice)}
               </span>
             )}
           </div>
