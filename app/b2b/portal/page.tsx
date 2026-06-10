@@ -11,7 +11,7 @@ import {
   Package, TrendingUp, Clock, CheckCircle, Truck,
   UserCheck, FileText, LogOut, BarChart3, Phone,
   Mail, MessageSquare, ArrowRight, Building2,
-  ChevronDown, ChevronUp, AlertCircle,
+  ChevronDown, ChevronUp, AlertCircle, Leaf,
 } from 'lucide-react'
 
 // ─── Demo Data ────────────────────────────────────────────────────────────────
@@ -116,6 +116,11 @@ export default function B2BPortalPage() {
               <p className="mt-1 text-sm text-muted-foreground">{DEMO_SESSION.companyName} — Portal B2B EcoBox</p>
             </div>
             <div className="flex gap-3">
+              <Button variant="outline" size="sm" asChild>
+                <Link href="/b2b/esg">
+                  <Leaf className="mr-2 h-4 w-4 text-[#A4F000]" /> Laporan ESG
+                </Link>
+              </Button>
               <Button className="bg-primary text-primary-foreground hover:bg-[#8BD400]" asChild>
                 <Link href="/b2b/rfq">
                   <FileText className="mr-2 h-4 w-4" /> Ajukan RFQ Baru
@@ -236,8 +241,41 @@ export default function B2BPortalPage() {
                   ))}
                 </div>
               </div>
+
+              {/* ESG Report CTA */}
+              <div className="rounded-2xl border-2 border-[#A4F000]/30 bg-[#A4F000]/5 p-6">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <Leaf className="h-5 w-5 text-[#A4F000]" />
+                      <h2 className="font-semibold text-foreground">Laporan Dampak ESG</h2>
+                    </div>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      Ekspor laporan lingkungan siap pakai untuk investor, regulator, dan stakeholder ESG perusahaan Anda.
+                      Mencakup plastik dicegah, karbon dihemat, dan sertifikasi produk.
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {['Plastik Dicegah', 'Karbon Dihemat', 'Sertifikasi Produk', 'SDG Alignment'].map((tag) => (
+                        <span key={tag} className="rounded-full bg-[#A4F000]/10 px-2.5 py-0.5 text-xs font-medium text-[#5a8500]">
+                          ✓ {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="shrink-0 text-right">
+                    <div className="text-3xl font-bold text-[#A4F000]">94</div>
+                    <div className="text-xs text-muted-foreground">ESG Score</div>
+                  </div>
+                </div>
+                <Button className="mt-4 bg-primary text-primary-foreground hover:bg-[#8BD400]" asChild>
+                  <Link href="/b2b/esg">
+                    Buka Laporan ESG <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
           )}
+
 
           {/* ── Order Tracking ─────────────────────────────────────────────── */}
           {activeTab === 'orders' && (
