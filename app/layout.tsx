@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { CartProvider } from '@/hooks/use-cart'
+import { EcoChatWidget } from '@/components/eco-chat-widget'
 import './globals.css'
 
 const inter = Inter({
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <CartProvider>
           {children}
+          <EcoChatWidget />
         </CartProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
