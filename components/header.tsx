@@ -9,8 +9,11 @@ import { useCart } from '@/hooks/use-cart'
 
 const navigation = [
   { name: 'Belanja', href: '/shop' },
-  { name: 'Kategori', href: '/categories' },
-  { name: 'Dampak', href: '/impact' },
+  { name: 'Event', href: '/events' },
+  { name: 'Langganan', href: '/subscribe' },
+  { name: 'Konsultan', href: '/consultant' },
+  { name: 'B2B', href: '/b2b' },
+  { name: 'Afiliasi', href: '/affiliate' },
   { name: 'Tentang', href: '/about' },
 ]
 
@@ -28,6 +31,7 @@ export function Header() {
             alt="EcoBox"
             width={48}
             height={48}
+            priority                    // LCP element — preload untuk mempercepat render awal
             className="h-10 w-10 lg:h-12 lg:w-12"
           />
           <span className="text-xl font-bold tracking-tight lg:text-2xl">

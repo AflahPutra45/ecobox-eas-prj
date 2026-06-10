@@ -9,6 +9,7 @@ import { Footer } from '@/components/footer'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { products } from '@/lib/data'
+import { formatRupiah } from '@/lib/utils'
 import {
   Star,
   Check,
@@ -156,11 +157,11 @@ export default function ProductPage({
               <div className="mt-6">
                 <div className="flex items-baseline gap-3">
                   <span className="text-4xl font-bold text-foreground">
-                    ${product.price.toFixed(2)}
+                    {formatRupiah(product.price)}
                   </span>
                   {product.originalPrice && (
                     <span className="text-xl text-muted-foreground line-through">
-                      ${product.originalPrice.toFixed(2)}
+                      {formatRupiah(product.originalPrice)}
                     </span>
                   )}
                 </div>
@@ -206,7 +207,7 @@ export default function ProductPage({
                   className="flex-1 bg-primary text-primary-foreground hover:bg-[#8BD400]"
                 >
                   <ShoppingCart className="mr-2 h-5 w-5" />
-                  Tambah ke Keranjang - ${(product.price * quantity).toFixed(2)}
+                  Tambah ke Keranjang - {formatRupiah(product.price * quantity)}
                 </Button>
 
                 <Button

@@ -9,6 +9,7 @@ import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
 import { useCart } from '@/hooks/use-cart'
 import { Trash2, Plus, Minus, ShoppingBag, ArrowRight, Leaf } from 'lucide-react'
+import { formatRupiah } from '@/lib/utils'
 
 export default function CartPage() {
     const { items, totalItems, totalPrice, removeItem, updateQuantity } = useCart()
@@ -91,7 +92,7 @@ export default function CartPage() {
                                                         </button>
                                                     </div>
                                                     <span className="font-bold text-foreground">
-                                                        ${(item.product.price * item.quantity).toFixed(2)}
+                                                        {formatRupiah(item.product.price * item.quantity)}
                                                     </span>
                                                 </div>
                                             </div>
@@ -114,7 +115,7 @@ export default function CartPage() {
                                 <div className="mt-4 space-y-3 text-sm">
                                     <div className="flex justify-between">
                                         <span className="text-muted-foreground">Subtotal ({totalItems} item)</span>
-                                        <span className="font-medium">${totalPrice.toFixed(2)}</span>
+                                        <span className="font-medium">{formatRupiah(totalPrice)}</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="text-muted-foreground">Pengiriman</span>
@@ -123,7 +124,7 @@ export default function CartPage() {
                                     <Separator />
                                     <div className="flex justify-between text-base">
                                         <span className="font-semibold">Total</span>
-                                        <span className="text-xl font-bold">${totalPrice.toFixed(2)}</span>
+                                        <span className="text-xl font-bold">{formatRupiah(totalPrice)}</span>
                                     </div>
                                 </div>
                                 <Button
