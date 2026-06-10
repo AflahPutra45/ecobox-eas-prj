@@ -9,6 +9,7 @@ import { useCart } from '@/hooks/use-cart'
 
 const navigation = [
   { name: 'Belanja', href: '/shop' },
+  { name: 'Event', href: '/events' },
   { name: 'Langganan', href: '/subscribe' },
   { name: 'Konsultan', href: '/consultant' },
   { name: 'B2B', href: '/b2b' },
