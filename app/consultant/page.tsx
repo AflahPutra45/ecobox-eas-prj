@@ -118,11 +118,6 @@ export default function ConsultantPage() {
                   <Button
                     size="lg"
                     className="bg-primary text-primary-foreground hover:bg-[#8BD400]"
-                    onClick={() => {
-                      // Trigger the floating widget — user clicks this to open chat
-                      const chatBtn = document.querySelector('[data-chat-trigger]') as HTMLButtonElement
-                      chatBtn?.click()
-                    }}
                     asChild
                   >
                     <a href="#chat-now">

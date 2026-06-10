@@ -13,6 +13,7 @@ const navigation = [
   { name: 'Langganan', href: '/subscribe' },
   { name: 'Konsultan', href: '/consultant' },
   { name: 'B2B', href: '/b2b' },
+  { name: 'Afiliasi', href: '/affiliate' },
   { name: 'Tentang', href: '/about' },
 ]
 
