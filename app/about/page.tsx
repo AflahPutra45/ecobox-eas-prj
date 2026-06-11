@@ -43,34 +43,34 @@ const team = [
   {
     name: 'Dicky Hadi Firmansyah',
     role: 'CEO - Chief Executive Officer',
-    image: '/Team/dicky.jpeg',
+    image: '/team/dicky.jpeg',
   },
   {
     name: 'Achmad Adelard Aflah',
     role: 'CFO - Chief Financial Officer',
-    image: '/Team/aflah.jpeg',
+    image: '/team/aflah.jpeg',
   },
   {
     name: 'Fikri Faiq Sholekhudin',
     role: 'COO - Chief Operating Officer',
-    image: '/Team/soleh.jpeg',
+    image: '/team/soleh.jpeg',
   },
   {
     name: 'Ahmed Syafiq Zidane',
     role: 'CMO - Chief Marketing Officer',
-    image: '/Team/ahmed.jpeg',
+    image: '/team/ahmed.jpeg',
   },
   {
     // ── Anggota ke-5: ganti name, role, dan image sesuai kebutuhan ──
     name: 'Zulhiari Maulana',
     role: 'CIO - Chief Information Officer',
-    image: '/Team/zul.jpg',
+    image: '/team/zul.jpg',
   },
   {
     // ── Anggota ke-6: ganti name, role, dan image sesuai kebutuhan ──
     name: 'Faustino Serafim Prastira',
     role: 'CTO - Chief Technology Officer',
-    image: '/Team/afim.jpeg',
+    image: '/team/afim.jpeg',
   },
 ]
 
