@@ -47,7 +47,7 @@ const team = [
   },
   {
     name: 'Achmad Adelard Aflah',
-    role: 'CFO - Chief Financial Officer',
+    role: 'CTO - Chief Techonology Officer',
     image: '/team/aflah.jpeg',
   },
   {
@@ -69,7 +69,7 @@ const team = [
   {
     // ── Anggota ke-6: ganti name, role, dan image sesuai kebutuhan ──
     name: 'Faustino Serafim Prastira',
-    role: 'CTO - Chief Technology Officer',
+    role: 'CFO - Chief Finance Officer',
     image: '/team/afim.jpeg',
   },
 ]
